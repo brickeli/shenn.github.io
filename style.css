@@ -146,7 +146,14 @@ nav ul {
     color: var(--primary-color);
 }
 
-/* 4. Footer */
+/* Contact */
+.contact {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+/* Footer */
 footer {
     background-color: var(--primary-color);
     color: #fff;
