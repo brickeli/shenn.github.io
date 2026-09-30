@@ -24,6 +24,16 @@ a {
 a:hover, a:focus {
     color: var(--accent-color);
 }
+text-btn {
+    display: block;
+    margin: 30px auto;
+    background: transparent;
+    border: none;
+    padding: 8px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 600;
+}
 
 /* 1. Navigation Bar */
 header {
