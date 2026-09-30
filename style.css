@@ -33,6 +33,9 @@ button.text-btn {
     color: var(--text-color);
     font-size: 16px;
     font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease;
 }
 
 /* 1. Navigation Bar */
