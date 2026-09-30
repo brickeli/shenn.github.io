@@ -37,6 +37,9 @@ button.text-btn {
     position: relative;
     transition: color 0.2s ease;
 }
+button.text-btn:hover {
+  color: var(--accent-color);
+}
 
 /* 1. Navigation Bar */
 header {
