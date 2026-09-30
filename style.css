@@ -24,7 +24,7 @@ a {
 a:hover, a:focus {
     color: var(--accent-color);
 }
-text-btn {
+.text-btn {
     display: block;
     margin: 30px auto;
     background: transparent;
