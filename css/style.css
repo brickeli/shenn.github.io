@@ -76,8 +76,11 @@ nav ul {
 
 /* 2. Hero Section */
 .hero {
-    /* Replace the URL with your actual background image */
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8));
+    background-image:
+        linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
+        url("../assets/backgrounds/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
     height: 60vh;
     min-height: 400px;
     display: flex;
@@ -90,7 +93,7 @@ nav ul {
 
 .hero-content h1 {
     font-size: 3rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .hero-content p {
@@ -114,13 +117,13 @@ nav ul {
 }
 
 .banner-content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-top: 5px;
     margin-bottom: 0.5rem;
 }
 
 .banner-content p {
-    font-size: 1.25rem;
+    font-size: 1rem;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -229,6 +232,10 @@ nav ul {
     border-radius: 8px;
     font-size: 0.8rem;
     text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background-color: rgb(var(--accent-color) / 0.25);
 }
 
 @media (min-width: 620px) {
