@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | UI/UX & Web Development</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Shane Hennessy Portfolio | UI/UX & Design Research Development</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
@@ -14,71 +13,41 @@
         <div id="nav-placeholder"></div>
     </header>
 
+    <!-- 2. Hero Area -->
+    <section id="interior" class="banner">
+        <div class="banner-content">
+            <h1>My Collection of Works</h1>
+            <p>An evergrowing list of digital projects ranging from UI / UX applcation designs, web development, branding & marketing, and other digital media.</p>
+        </div>
+    </section>
+
     <!-- 3. Portfolio Grid -->
     <section id="portfolio" class="portfolio-section">
-        <h2>Selected Works</h2>
-        <div class="grid-container">
-            <!-- Project 1 -->
-            <div class="card">
-                <div class="card-img" style="background-image: url('assets/nonogram.jpg'); background-size: cover;"></div>
-                <div class="card-content">
-                    <h3>Custom Nonogram Web App</h3>
-                    <p>A JavaScript-based puzzle game featuring custom difficulty scaling, timer mechanics, and local storage functionality.</p>
-                </div>
+      <h2 id="portfolio-heading">All Projects</h2>
+
+      <!-- Your existing 3x2 CSS Grid container -->
+      <div class="portfolio-grid" id="portfolio-grid"></div>
+        <!-- Reusable Card Template -->
+        <template id="portfolio-card-template">
+          <article class="portfolio-card">
+            <div class="card-media" role="img" aria-label=""></div>
+            <div class="card-content">
+              <ul class="card-tags" aria-label="Project categories"></ul>
+              <h3 class="card-title"></h3>
+              <p class="card-description"></p>
+              <div class="card-actions">
+                <a href="" class="btn btn-primary" target="_blank" rel="noopener noreferrer"></a>
+                <a href="" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"></a>
+              </div>
             </div>
-            <!-- Project 2 -->
-            <div class="card">
-                <div class="card-img" style="background-image: url('assets/sudoku.jpg'); background-size: cover;"></div>
-                <div class="card-content">
-                    <h3>Sudoku Browser Game</h3>
-                    <p>An interactive browser puzzle emphasizing responsive logic and clean layout design.</p>
-                </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="card">
-                <div class="card-img" style="background-image: url('assets/pixel-art.jpg'); background-size: cover;"></div>
-                <div class="card-content">
-                    <h3>Pixel Art: Organic Forms</h3>
-                    <p>A series exploring form simplification and color theory by distilling animals and modern fixtures into pixel art.</p>
-                </div>
-            </div>
-            <!-- Project 4 -->
-            <div class="card">
-                <div class="card-img" style="background-image: url('assets/ecommerce.jpg'); background-size: cover;"></div>
-                <div class="card-content">
-                    <h3>E-commerce UI/UX</h3>
-                    <p>Interface designs optimizing the user journey with a focus on strict WCAG visual accessibility standards.</p>
-                </div>
-            </div>
-            <!-- Project 5 -->
-            <div class="card">
-                <div class="card-img" style="background-image: url('assets/brand-assets.jpg'); background-size: cover;"></div>
-                <div class="card-content">
-                    <h3>Brand Asset Development</h3>
-                    <p>Cohesive visual identities created for cross-platform deployment across both web and print media.</p>
-                </div>
-            </div>
-            <!-- Project 6 -->
-            <div class="card">
-                <div class="card-img" style="background-image: url('assets/c-inventory.jpg'); background-size: cover;"></div>
-                <div class="card-content">
-                    <h3>Inventory Software Demo</h3>
-                    <p>A C-based software project demonstrating CSV file handling and data organization capabilities.</p>
-                </div>
-            </div>
-        </div>
+          </article>
+        </template>
     </section>
 
     <!-- 4. Footer -->
     <footer id="contact">
-        <div class="social-links">
-            <a href="https://github.com/yourusername">GitHub</a>
-            <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
-            <a href="mailto:your.email@example.com">Email Me</a>
-        </div>
-        <p>Currently available for freelance projects and full-time roles.</p>
-        <p>&copy; 2026. All rights reserved.</p>
+       <div id="footer-placeholder"></div>
     </footer>
-
+<script type="module" src="./main.js"></script>
 </body>
 </html>

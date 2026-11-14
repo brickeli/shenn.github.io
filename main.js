@@ -1,0 +1,125 @@
+import { portfolioProjects } from './js/projectList.js';
+
+// Header
+fetch('nav.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('nav-placeholder').innerHTML = data;
+  });
+
+// Footer
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
+  });
+
+
+
+
+// Generated Portolfio List
+function renderPortfolioItems(projects, { append = false, featuredOnly = false } = {}) {
+  const grid = document.getElementById("portfolio-grid");
+  const template = document.getElementById("portfolio-card-template");
+
+  if (!grid || !template) return;
+  if (!append) grid.innerHTML = "";
+
+  const itemsToRender = featuredOnly
+    ? projects.filter((project) => Boolean(project.featured))
+    : projects;
+
+  const fragment = document.createDocumentFragment();
+
+  itemsToRender.forEach((project) => {
+    const clone = template.content.cloneNode(true);
+
+    // Background Image on .card-media
+    const cardMedia = clone.querySelector(".card-media");
+    if (cardMedia && project.image) {
+      cardMedia.style.backgroundImage = `url("${project.image}")`;
+      cardMedia.setAttribute("aria-label", project.imageAlt || `${project.title} preview`);
+    }
+
+    // Tags
+    const tagList = clone.querySelector(".card-tags");
+    if (tagList) {
+      if (Array.isArray(project.tags) && project.tags.length > 0) {
+        project.tags.forEach((tag) => {
+          const li = document.createElement("li");
+          li.className = "tag-pill";
+          li.textContent = tag;
+          tagList.appendChild(li);
+        });
+      } else {
+        tagList.remove();
+      }
+    }
+
+    // Text
+    clone.querySelector(".card-title").textContent = project.title;
+    clone.querySelector(".card-description").textContent = project.description;
+
+    // Primary Button
+    const primaryLink = clone.querySelector(".btn-primary");
+    primaryLink.textContent = project.primaryBtn.label;
+    primaryLink.href = project.primaryBtn.url;
+    primaryLink.setAttribute("aria-label", `${project.primaryBtn.label} for ${project.title}`);
+
+    // Optional Secondary Button
+    const secondaryLink = clone.querySelector(".btn-secondary");
+    if (project.secondaryBtn && project.secondaryBtn.url) {
+      secondaryLink.textContent = project.secondaryBtn.label;
+      secondaryLink.href = project.secondaryBtn.url;
+      secondaryLink.setAttribute("aria-label", `${project.secondaryBtn.label} for ${project.title}`);
+    } else {
+      secondaryLink.remove();
+    }
+
+    fragment.appendChild(clone);
+  });
+
+  grid.appendChild(fragment);
+}
+
+function initPortfolioFilters(featuredOnly = false) {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const statusEl = document.getElementById("filter-status");
+
+  // Scope base dataset first so counts and results stay accurate on featured-only pages
+  const baseProjects = featuredOnly
+    ? portfolioProjects.filter((project) => Boolean(project.featured))
+    : portfolioProjects;
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const selectedTag = btn.dataset.filter;
+
+      filterButtons.forEach((b) => {
+        const isCurrent = b === btn;
+        b.classList.toggle("is-active", isCurrent);
+        b.setAttribute("aria-pressed", String(isCurrent));
+      });
+
+      const filtered =
+        selectedTag === "all"
+          ? baseProjects
+          : baseProjects.filter((project) => project.tags?.includes(selectedTag));
+
+      renderPortfolioItems(filtered);
+
+      if (statusEl) {
+        statusEl.textContent = `Showing ${filtered.length} ${
+          filtered.length === 1 ? "project" : "projects"
+        }${selectedTag === "all" ? "" : ` in ${selectedTag}`}.`;
+      }
+    });
+  });
+}
+
+// Initialize based on data-featured-only attribute on #portfolio-grid
+const grid = document.getElementById("portfolio-grid");
+const showOnlyFeatured = grid?.dataset.featuredOnly === "true";
+
+renderPortfolioItems(portfolioProjects, { featuredOnly: showOnlyFeatured });
+initPortfolioFilters(showOnlyFeatured);

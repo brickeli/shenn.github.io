@@ -1,28 +1,29 @@
 /* Base Styles & Accessibility */
 :root {
-    --primary-color: #2c3e50;
-    --accent-color: #3498db;
-    --text-color: #333;
-    --bg-color: #f9f9f9;
+    --primary-color: 44 62 80;
+    --accent-color: 52 152 219;
+    --text-color: 51 51 51;
+    --bg-color: 249 249 249;
+    --surface-pill: 235 235 235;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: var(--text-color);
+    color: rgb(var(--text-color))
     line-height: 1.6;
-    background-color: var(--bg-color);
+    background-color: rgb(var(--bg-color))
 }
 
 a {
     text-decoration: none;
-    color: var(--text-color);
+    color: rgb(var(--text-color))
     transition: color 0.3s ease;
 }
 
 a:hover, a:focus {
-    color: var(--accent-color);
+    color: rgb(var(--accent-color))
 }
 button.text-btn {
     display: block;
@@ -30,7 +31,7 @@ button.text-btn {
     background: transparent;
     border: none;
     padding: 8px;
-    color: var(--text-color);
+    color: rgb(var(--text-color))
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
@@ -38,7 +39,7 @@ button.text-btn {
     transition: color 0.2s ease;
 }
 button.text-btn:hover {
-  color: var(--accent-color);
+  color: rgb(var(--accent-color))
 }
 
 /* 1. Navigation Bar */
@@ -62,7 +63,7 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: rgb(var(--primary-color));
 }
 
 nav ul {
@@ -76,7 +77,7 @@ nav ul {
 /* 2. Hero Section */
 .hero {
     /* Replace the URL with your actual background image */
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('assets/hero-bg.jpg') center/cover;
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8));
     height: 60vh;
     min-height: 400px;
     display: flex;
@@ -101,7 +102,7 @@ nav ul {
 /* Banner Section */
 .banner {
     /* Replace the URL with your actual background image */
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('assets/hero-bg.jpg') center/cover;
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8));
     height: 30vh;
     min-height: 250px;
     display: flex;
@@ -135,17 +136,16 @@ nav ul {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
-    color: var(--primary-color);
+    color: rgb(var(--primary-color));
 }
 
-.grid-container {
+.portfolio-grid {
     display: grid;
-    /* Creates responsive columns that won't shrink below 300px */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
 }
 
-.card {
+.portfolio-card {
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
@@ -153,14 +153,17 @@ nav ul {
     transition: transform 0.3s ease;
 }
 
-.card:hover {
+.portfolio-card:hover {
     transform: translateY(-5px);
 }
 
-.card-img {
+.card-media {
     height: 200px;
+    width: 100%;
+    aspect-ratio: 16 / 10;
     background-color: #ddd;
-    /* Add actual images via inline styles or img tags later */
+    background-position: center top;
+    background-size: cover;
 }
 
 .card-content {
@@ -169,8 +172,81 @@ nav ul {
 
 .card-content h3 {
     margin: 0 0 0.5rem 0;
-    color: var(--primary-color);
+    color: rgb(var(--primary-color));
 }
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn[aria-pressed="true"] {
+  background-color: rgb(var(--accent-color, #111));
+  color: rgb(var(--accent-contrast, #fff));
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
+}
+
+.tag-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgb(var(--surface-pill));
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.card-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: rgb(var(--accent-color) / 0.1);
+    border: 1px solid rgb(var(--accent-color));
+    color: rgb(var(--accent-color));
+    font-weight: 700;
+    padding: .5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 620px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 769px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+
 
 /* Contact */
 .contact {
@@ -178,11 +254,30 @@ nav ul {
     margin: 4rem auto;
     padding: 0 2rem;
     display: flex;
+    flex-direction: column;
+}
+
+.about {
+  flex:1;
+}
+.contact-form {
+  flex:2;
+}
+
+@media (min-width: 620px) {
+  .contact {
+    flex-direction: row;
+  }
+}
+@media (min-width: 769px) {
+  .about, .contact-form {
+    flex:1;
+  }
 }
 
 /* Footer */
 footer {
-    background-color: var(--primary-color);
+    background-color: rgb(var(--primary-color));
     color: #fff;
     text-align: center;
     padding: 3rem 2rem;
