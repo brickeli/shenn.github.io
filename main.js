@@ -17,7 +17,7 @@ fetch('footer.html')
 
 
 
-// Generated Portolfio List
+// Generated Portfolio List
 function renderPortfolioItems(projects, { append = false, featuredOnly = false } = {}) {
   const grid = document.getElementById("portfolio-grid");
   const template = document.getElementById("portfolio-card-template");
@@ -60,20 +60,29 @@ function renderPortfolioItems(projects, { append = false, featuredOnly = false }
     clone.querySelector(".card-title").textContent = project.title;
     clone.querySelector(".card-description").textContent = project.description;
 
-    // Primary Button
-    const primaryLink = clone.querySelector(".btn-primary");
-    primaryLink.textContent = project.primaryBtn.label;
-    primaryLink.href = project.primaryBtn.url;
-    primaryLink.setAttribute("aria-label", `${project.primaryBtn.label} for ${project.title}`);
+    // Helper for optional buttons
+    const configureLink = (selector, btnData) => {
+      const link = clone.querySelector(selector);
+      if (!link) return false;
 
-    // Optional Secondary Button
-    const secondaryLink = clone.querySelector(".btn-secondary");
-    if (project.secondaryBtn && project.secondaryBtn.url) {
-      secondaryLink.textContent = project.secondaryBtn.label;
-      secondaryLink.href = project.secondaryBtn.url;
-      secondaryLink.setAttribute("aria-label", `${project.secondaryBtn.label} for ${project.title}`);
-    } else {
-      secondaryLink.remove();
+      if (btnData?.url && btnData?.label) {
+        link.textContent = btnData.label;
+        link.href = btnData.url;
+        link.setAttribute("aria-label", `${btnData.label} for ${project.title}`);
+        return true;
+      }
+
+      link.remove();
+      return false;
+    };
+
+    const hasPrimary = configureLink(".btn-primary", project.primaryBtn);
+    const hasSecondary = configureLink(".btn-secondary", project.secondaryBtn);
+
+    // Optional: Clean up button wrapper if neither button exists
+    const actionsContainer = clone.querySelector(".card-actions"); // Adjust selector to match your HTML
+    if (actionsContainer && !hasPrimary && !hasSecondary) {
+      actionsContainer.remove();
     }
 
     fragment.appendChild(clone);

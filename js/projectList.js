@@ -25,6 +25,10 @@ export const portfolioProjects = [
     primaryBtn: {
       label: "Live Demo ↗",
       url: "https://brickeli.github.io/WebApps/DailyTarot/arcana.html"
+    },
+    secondaryBtn: {
+      label: "Case Study  ↗",
+      url: ""
     }
   },
   {
@@ -53,6 +57,10 @@ export const portfolioProjects = [
     primaryBtn: {
       label: "View Project ↗",
       url: "https://www.behance.net/gallery/176520899/ASN-Gateway-Landing-Page"
+    },
+    secondaryBtn: {
+      label: "Case Study  ↗",
+      url: ""
     }
   },
   {
@@ -65,6 +73,10 @@ export const portfolioProjects = [
     primaryBtn: {
       label: "View Project ↗",
       url: "https://www.behance.net/gallery/176528805/LowellFive-Bank-Website"
+    },
+    secondaryBtn: {
+      label: "Case Study  ↗",
+      url: ""
     }
   },
   {
@@ -77,6 +89,10 @@ export const portfolioProjects = [
     primaryBtn: {
       label: "View Project ↗",
       url: "https://www.behance.net/gallery/146355991/Planet-Fitness-Franchise-Events-Website-Design"
+    },
+    secondaryBtn: {
+      label: "Case Study  ↗",
+      url: ""
     }
   },
   {
@@ -89,6 +105,10 @@ export const portfolioProjects = [
     primaryBtn: {
       label: "View Project ↗",
       url: "https://www.behance.net/gallery/239404761/Engagys-Healthcare-Consultation-Inforgraphics"
+    },
+    secondaryBtn: {
+      label: "Case Study  ↗",
+      url: ""
     }
   },
   {
@@ -101,6 +121,26 @@ export const portfolioProjects = [
     primaryBtn: {
       label: "View Project ↗",
       url: "https://www.behance.net/gallery/239458229/CommpayHR-eBook-Design"
+    },
+    secondaryBtn: {
+      label: "Case Study  ↗",
+      url: ""
+    }
+  },
+  {
+    title: "Spreadsheet Dashboards",
+    description: "Visual dashboard designs of accumulated data stored within spreadsheet tabs, created with custom parsing funtions to group and sort necessary information.",
+    image: "assets/thumbnails/SpreadSheet-OpenGraphPreview-wide.png",
+    imageAlt: "Preview of internal pages within the ebook",
+    tags: ["Data Analysis", "Excel", "Graphic Design"],
+    featured: false,
+    primaryBtn: {
+      label: "Contact Me",
+      url: "./contact.html"
+    },
+    secondaryBtn: {
+      label: "Case Study  ↗",
+      url: ""
     }
   },
 ];
