@@ -7,6 +7,11 @@
     --surface-pill: 235 235 235;
 }
 
+html {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
@@ -14,6 +19,38 @@ body {
     color: rgb(var(--text-color))
     line-height: 1.6;
     background-color: rgb(var(--bg-color))
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+
+button.text-btn {
+    display: block;
+    margin: 30px auto;
+    background-color: rgb(var(--surface-pill));
+    border: none;
+    padding: .5rem 1rem;
+    color: rgb(var(--accent-color));
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+}
+button.text-btn:hover {
+  background-color: rgb(var(--accent-color) / 0.15);
 }
 
 a {
@@ -24,22 +61,6 @@ a {
 
 a:hover, a:focus {
     color: rgb(var(--accent-color))
-}
-button.text-btn {
-    display: block;
-    margin: 30px auto;
-    background: transparent;
-    border: none;
-    padding: 8px;
-    color: rgb(var(--text-color))
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-    transition: color 0.2s ease;
-}
-button.text-btn:hover {
-  color: rgb(var(--accent-color))
 }
 
 /* 1. Navigation Bar */
@@ -128,7 +149,7 @@ nav ul {
     margin: 0 auto;
 }
 
-/* 3. Portfolio Grid (3 Columns, 2 Rows) */
+/* 3. Portfolio Grid */
 .portfolio-section {
     max-width: 1200px;
     margin: 4rem auto;
@@ -267,18 +288,31 @@ nav ul {
 .about {
   flex:1;
 }
+
+.contact span {
+  font-weight: 700;
+}
+
+.intro {
+  border-bottom: 1px solid rgb(var(--surface-pill));
+  margin-bottom: 1rem;
+}
+
+
+.details p {
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  margin-top:0;
+}
+
+
 .contact-form {
   flex:2;
 }
 
-@media (min-width: 620px) {
+@media (min-width: 700px) {
   .contact {
     flex-direction: row;
-  }
-}
-@media (min-width: 769px) {
-  .about, .contact-form {
-    flex:1;
   }
 }
 
