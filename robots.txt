@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://brickeli.github.io/shenn.github.io/sitemap.xml
+Sitemap: https://www.hennessyshane.com/sitemap.xml
