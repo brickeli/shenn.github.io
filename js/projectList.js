@@ -2,29 +2,17 @@ export const portfolioProjects = [
   {
     title: "Reactle & Nuclear Reactle",
     description: "Interactive chemical and nuclear equation balancer featuring real-time atom count matrices and daily challenges. Built with an AI-assisted development workflow.",
-    image: "assets/thumbnails/Reactle-OpenGraphPreview-sq.png",
+    image: "assets/thumbnails/Reactle-OpenGraphPreview-wide.png",
     imageAlt: "Reactle chemical equation balancer interface",
     tags: ["Web Dev", "UI/UX", "AI"],
     featured: true,
     primaryBtn: {
-      label: "Play Now ↗",
+      label: "Live Demo ↗",
       url: "https://brickeli.github.io/WebApps/Reactle/index.html"
     },
-    // secondaryBtn: {
-    //   label: "Source Code",
-    //   url: "https://github.com/brickeli/WebApps"
-    // }
-  },
-  {
-    title: "Gridwork Sudoku",
-    description: "WCAG-aligned browser Sudoku application with dynamic difficulty generation, auto-notes, and local storage persistence. Built with an AI-assisted development workflow.",
-    image: "assets/thumbnails/GridWork-OpenGraphPreview-sq.png",
-    imageAlt: "Gridwork Sudoku game board",
-    tags: ["Web Dev", "UI/UX", "AI"],
-    featured: true,
-    primaryBtn: {
-      label: "Play Now ↗",
-      url: "https://brickeli.github.io/WebApps/Sudoku/sudoku.html"
+    secondaryBtn: {
+      label: "Case Study  ↗",
+      url: "https://www.behance.net/gallery/257566667/Reactle-Chemical-Equation-Balancer"
     }
   },
   {
@@ -37,6 +25,22 @@ export const portfolioProjects = [
     primaryBtn: {
       label: "Live Demo ↗",
       url: "https://brickeli.github.io/WebApps/DailyTarot/arcana.html"
+    }
+  },
+  {
+    title: "Gridwork Sudoku",
+    description: "WCAG-aligned browser Sudoku application with dynamic difficulty generation, auto-notes, and local storage persistence. Built with an AI-assisted development workflow.",
+    image: "assets/thumbnails/GridWork-OpenGraphPreview-sq.png",
+    imageAlt: "Gridwork Sudoku game board",
+    tags: ["Web Dev", "UI/UX", "AI"],
+    featured: true,
+    primaryBtn: {
+      label: "Live Demo ↗",
+      url: "https://brickeli.github.io/WebApps/Sudoku/sudoku.html"
+    },
+    secondaryBtn: {
+      label: "Case Study  ↗",
+      url: "https://www.behance.net/gallery/256572931/Sudoku-Mobile-Web-Application"
     }
   },
   {
