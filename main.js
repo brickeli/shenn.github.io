@@ -15,8 +15,6 @@ fetch('footer.html')
   });
 
 
-
-
 // Generated Portfolio List
 function renderPortfolioItems(projects, { append = false, featuredOnly = false } = {}) {
   const grid = document.getElementById("portfolio-grid");

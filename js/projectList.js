@@ -19,7 +19,7 @@ export const portfolioProjects = [
     title: "Arcana Tarot",
     description: "Daily Tarot web application featuring procedural sigil generation, daily single & triple card spreads, and journal. Built with an AI-assisted development workflow.",
     image: "assets/thumbnails/Arcana-OpenGraphPreview-wide.png",
-    imageAlt: "Arcanum Tarot card reading interface",
+    imageAlt: "Arcana Tarot card reading interface",
     tags: ["Web Dev", "UI/UX", "AI"],
     featured: true,
     primaryBtn: {
@@ -37,7 +37,7 @@ export const portfolioProjects = [
     image: "assets/thumbnails/GridWork-OpenGraphPreview-sq.png",
     imageAlt: "Gridwork Sudoku game board",
     tags: ["Web Dev", "UI/UX", "AI"],
-    featured: true,
+    featured: false,
     primaryBtn: {
       label: "Live Demo ↗",
       url: "https://brickeli.github.io/WebApps/Sudoku/sudoku.html"
@@ -49,7 +49,7 @@ export const portfolioProjects = [
   },
   {
     title: "Journal Gateway",
-    description: "A web hub that houses 4 different journals, interactive hero, news and social media updates, and access to community forums. Created using Adobe Software.",
+    description: "A web hub that houses 4 different journals, interactive hero, news and social media updates, and access to community forums. Created using Adobe software.",
     image: "assets/thumbnails/Journal-OpenGraphPreview-wide.png",
     imageAlt: "Journal Gateway hero preview image",
     tags: ["UI/UX", "Web Design"],
@@ -65,9 +65,9 @@ export const portfolioProjects = [
   },
   {
     title: "Banking Website",
-    description: "Lowell Five Banking website design concept highlighting important account features, testimonials, and other banking insights. Created using Adobe Software.",
+    description: "Lowell Five Banking website design concept highlighting important account features, testimonials, and other banking insights. Created using Adobe software.",
     image: "assets/thumbnails/LowellFive-OpenGraphPreview-wide.png",
-    imageAlt: "LowellFive banking hero preview image",
+    imageAlt: "Lowell Five banking hero preview image",
     tags: ["UI/UX", "Web Design"],
     featured: true,
     primaryBtn: {
@@ -81,11 +81,11 @@ export const portfolioProjects = [
   },
   {
     title: "PF Franchise Events",
-    description: "Planet Fitness franchise portal featurs an in-depth outline including interactive elements and customizable content blocks. Created using Adobe Software.",
+    description: "Planet Fitness franchise portal featuring an in-depth outline including interactive elements and customizable content blocks. Created using Adobe software.",
     image: "assets/thumbnails/PFEvents-OpenGraphPreview-wide.png",
     imageAlt: "PF Franchise events hero preview image",
     tags: ["UI/UX", "Web Design"],
-    featured: true,
+    featured: false,
     primaryBtn: {
       label: "View Project ↗",
       url: "https://www.behance.net/gallery/146355991/Planet-Fitness-Franchise-Events-Website-Design"
@@ -97,14 +97,14 @@ export const portfolioProjects = [
   },
   {
     title: "Infographic Summary",
-    description: "Infographic summary of survery findings prioritizing brand identity, engaging visuals, and data analysis creating an easy to scan overview. Created using Adobe Software.",
+    description: "Infographic summary of survey findings prioritizing brand identity, engaging visuals, and data analysis, creating an easy-to-scan overview. Created using Adobe software.",
     image: "assets/thumbnails/Infographic-OpenGraphPreview-wide.png",
     imageAlt: "Overview preview of infographic design showcasing branding elements and data points",
     tags: ["Graphic Design", "Branding", "Data Analysis"],
     featured: false,
     primaryBtn: {
       label: "View Project ↗",
-      url: "https://www.behance.net/gallery/239404761/Engagys-Healthcare-Consultation-Inforgraphics"
+      url: "https://www.behance.net/gallery/239404761/Engagys-Healthcare-Consultation-Infographics"
     },
     secondaryBtn: {
       label: "Case Study  ↗",
@@ -113,11 +113,11 @@ export const portfolioProjects = [
   },
   {
     title: "eBook Design",
-    description: "eBook design showcasing a comprehensive collection of insights providing tools and other resources to the customer. Created using Adobe Software.",
+    description: "eBook design showcasing a comprehensive collection of insights providing tools and other resources to the customer. Created using Adobe software.",
     image: "assets/thumbnails/ebook-OpenGraphPreview-wide.png",
-    imageAlt: "Preview of internal pages within the ebook",
+    imageAlt: "Preview of internal pages within the eBook",
     tags: ["Graphic Design", "Branding", "eBook"],
-    featured: false,
+    featured: true,
     primaryBtn: {
       label: "View Project ↗",
       url: "https://www.behance.net/gallery/239458229/CommpayHR-eBook-Design"
@@ -129,11 +129,11 @@ export const portfolioProjects = [
   },
   {
     title: "Spreadsheet Dashboards",
-    description: "Visual dashboard designs of accumulated data stored within spreadsheet tabs, created with custom parsing funtions to group and sort necessary information.",
+    description: "Visual dashboard designs of accumulated data stored within spreadsheet tabs, created with custom parsing functions to group and sort necessary information.",
     image: "assets/thumbnails/SpreadSheet-OpenGraphPreview-wide.png",
-    imageAlt: "Preview of internal pages within the ebook",
+    imageAlt: "Preview of visual spreadsheet dashboard designs and data charts",
     tags: ["Data Analysis", "Excel", "Graphic Design"],
-    featured: false,
+    featured: true,
     primaryBtn: {
       label: "Contact Me",
       url: "./contact.html"
