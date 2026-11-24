@@ -17,9 +17,9 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: rgb(var(--text-color))
+    color: rgb(var(--text-color));
     line-height: 1.6;
-    background-color: rgb(var(--bg-color))
+    background-color: rgb(var(--bg-color));
 }
 
 input, button, textarea, select {
@@ -68,12 +68,12 @@ button.text-btn:hover {
 
 a {
     text-decoration: none;
-    color: rgb(var(--text-color))
+    color: rgb(var(--text-color));
     transition: color 0.3s ease;
 }
 
 a:hover, a:focus {
-    color: rgb(var(--accent-color))
+    color: rgb(var(--accent-color));
 }
 
 /* 1. Navigation Bar */
@@ -269,20 +269,6 @@ nav ul {
     background-color: rgb(var(--accent-color) / 0.15);
 }
 
-
-@media (min-width: 620px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 769px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-
 /* Contact */
 
 .contact-content {
@@ -329,13 +315,6 @@ nav ul {
   margin-top: 1.5rem;
 }
 
-
-@media (max-width: 768px) {
-  .uneven-two-column {
-    flex-direction: column;
-  }
-}
-
 /* Footer */
 footer {
     background-color: rgb(var(--primary-color));
@@ -357,7 +336,20 @@ footer {
     font-weight: bold;
 }
 
-/* Mobile Responsiveness for Navigation */
+/* Mobile Responsiveness */
+
+@media (min-width: 620px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -376,5 +368,7 @@ footer {
     .hero-content p, .banner-content p {
         font-size: 1.15rem;
     }
-
+    .uneven-two-column {
+      flex-direction: column;
+    }
 }
