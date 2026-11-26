@@ -40,7 +40,7 @@ export const portfolioProjects = [
     featured: false,
     primaryBtn: {
       label: "Live Demo ↗",
-      url: "https://brickeli.github.io/WebApps/Sudoku/sudoku.html"
+      url: "https://brickeli.github.io/WebApps/GridWork/Sudoku/index.html"
     },
     secondaryBtn: {
       label: "Case Study  ↗",
