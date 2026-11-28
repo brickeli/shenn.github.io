@@ -2,7 +2,7 @@ export const portfolioProjects = [
   {
     title: "Reactle & Nuclear Reactle",
     description: "Interactive chemical and nuclear equation balancer featuring real-time atom count matrices and daily challenges. Built with an AI-assisted development workflow.",
-    image: "assets/thumbnails/Reactle-OpenGraphPreview-wide.png",
+    image: "assets/thumbnails/og-reactle.png",
     imageAlt: "Reactle chemical equation balancer interface",
     tags: ["Web Dev", "UI/UX", "AI"],
     featured: true,
@@ -18,7 +18,7 @@ export const portfolioProjects = [
   {
     title: "Arcana Tarot",
     description: "Daily Tarot web application featuring procedural sigil generation, daily single & triple card spreads, and journal. Built with an AI-assisted development workflow.",
-    image: "assets/thumbnails/Arcana-OpenGraphPreview-wide.png",
+    image: "assets/thumbnails/og-arcana.png",
     imageAlt: "Arcana Tarot card reading interface",
     tags: ["Web Dev", "UI/UX", "AI"],
     featured: true,
@@ -50,7 +50,7 @@ export const portfolioProjects = [
   {
     title: "Journal Gateway",
     description: "A web hub that houses 4 different journals, interactive hero, news and social media updates, and access to community forums. Created using Adobe software.",
-    image: "assets/thumbnails/Journal-OpenGraphPreview-wide.png",
+    image: "assets/thumbnails/og-journal.png",
     imageAlt: "Journal Gateway hero preview image",
     tags: ["UI/UX", "Web Design"],
     featured: true,
@@ -66,7 +66,7 @@ export const portfolioProjects = [
   {
     title: "Banking Website",
     description: "Lowell Five Banking website design concept highlighting important account features, testimonials, and other banking insights. Created using Adobe software.",
-    image: "assets/thumbnails/LowellFive-OpenGraphPreview-wide.png",
+    image: "assets/thumbnails/og-banking.png",
     imageAlt: "Lowell Five banking hero preview image",
     tags: ["UI/UX", "Web Design"],
     featured: true,
@@ -82,7 +82,7 @@ export const portfolioProjects = [
   {
     title: "PF Franchise Events",
     description: "Planet Fitness franchise portal featuring an in-depth outline including interactive elements and customizable content blocks. Created using Adobe software.",
-    image: "assets/thumbnails/PFEvents-OpenGraphPreview-wide.png",
+    image: "assets/thumbnails/og-pfevents.png",
     imageAlt: "PF Franchise events hero preview image",
     tags: ["UI/UX", "Web Design"],
     featured: false,
@@ -98,7 +98,7 @@ export const portfolioProjects = [
   {
     title: "Infographic Summary",
     description: "Infographic summary of survey findings prioritizing brand identity, engaging visuals, and data analysis, creating an easy-to-scan overview. Created using Adobe software.",
-    image: "assets/thumbnails/Infographic-OpenGraphPreview-wide.png",
+    image: "assets/thumbnails/og-infographic.png",
     imageAlt: "Overview preview of infographic design showcasing branding elements and data points",
     tags: ["Graphic Design", "Branding", "Data Analysis"],
     featured: false,
@@ -114,7 +114,7 @@ export const portfolioProjects = [
   {
     title: "eBook Design",
     description: "eBook design showcasing a comprehensive collection of insights providing tools and other resources to the customer. Created using Adobe software.",
-    image: "assets/thumbnails/ebook-OpenGraphPreview-wide.png",
+    image: "assets/thumbnails/og-ebook.png",
     imageAlt: "Preview of internal pages within the eBook",
     tags: ["Graphic Design", "Branding", "eBook"],
     featured: true,
@@ -130,7 +130,7 @@ export const portfolioProjects = [
   {
     title: "Spreadsheet Dashboards",
     description: "Visual dashboard designs of accumulated data stored within spreadsheet tabs, created with custom parsing functions to group and sort necessary information.",
-    image: "assets/thumbnails/SpreadSheet-OpenGraphPreview-wide.png",
+    image: "assets/thumbnails/og-spreadsheet.png",
     imageAlt: "Preview of visual spreadsheet dashboard designs and data charts",
     tags: ["Data Analysis", "Excel", "Graphic Design"],
     featured: true,
