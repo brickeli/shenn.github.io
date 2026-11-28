@@ -32,15 +32,15 @@ export const portfolioProjects = [
     }
   },
   {
-    title: "Gridwork Sudoku",
-    description: "WCAG-aligned browser Sudoku application with dynamic difficulty generation, auto-notes, and local storage persistence. Built with an AI-assisted development workflow.",
-    image: "assets/thumbnails/GridWork-OpenGraphPreview-sq.png",
-    imageAlt: "Gridwork Sudoku game board",
+    title: "Gridwork Suite",
+    description: "WCAG-aligned browser based games with dynamic difficulty generation, mode-toggles, and local storage persistence. Built with an AI-assisted development workflow.",
+    image: "assets/thumbnails/og-gridwork.png",
+    imageAlt: "Gridwork hub display",
     tags: ["Web Dev", "UI/UX", "AI"],
     featured: false,
     primaryBtn: {
       label: "Live Demo ↗",
-      url: "https://brickeli.github.io/WebApps/GridWork/Sudoku/index.html"
+      url: "https://brickeli.github.io/WebApps/GridWork/index.html"
     },
     secondaryBtn: {
       label: "Case Study  ↗",
